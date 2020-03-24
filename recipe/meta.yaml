@@ -36,7 +36,7 @@ about:
   home: https://github.com/lumicks/pylake
   license: Apache-2.0
   license_file: license.md
-  summary: 'Data analysis tools for Lumicks Bluelake'
+  summary: Data analysis tools for Lumicks Bluelake
   dev_url: https://github.com/lumicks/pylake
 
 extra:
