@@ -33,6 +33,10 @@ test:
   imports:
     - lumicks.pylake
     - lumicks.pylake.tests
+  requires:
+    - pytest
+  commands:
+    - pytest
 
 about:
   home: https://github.com/lumicks/pylake
