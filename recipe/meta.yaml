@@ -40,7 +40,7 @@ test:
   requires:
     - pytest
   commands:
-    - pytest --pyargs lumicks.pylake
+    - python -c "import lumicks.pylake as lk; import sys; sys.exit(lk.pytest())"
 
 about:
   home: https://github.com/lumicks/pylake
