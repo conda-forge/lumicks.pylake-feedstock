@@ -1,5 +1,5 @@
 {% set name = "lumicks.pylake" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 68bb7af5747b1d6ee1e4263bc287b3a8cac1296ea8c53208cc56238d58587120
+  sha256: 1b3a2b565d708efaa009a5232649ff439d208fc56aec23bfaf81804403b32dd3
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     - ipywidgets >=7.0.0
     - cachetools >=3.1
     - deprecated >=1.2.8
-    - scikit-learn >=0.18.0
+    - scikit-learn >=0.18.0,<1.0
     - scikit-image >=0.17.2
 
 test:
