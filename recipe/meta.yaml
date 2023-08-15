@@ -1,5 +1,5 @@
 {% set name = "lumicks.pylake" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e6d94538ace5e5f4deddf8189c45e37b03bfe79e0fd62c25f88c0e49095de6f
+  sha256: 70ba5120775de787f9eb2900af8a7f5ba1cec8bb6b3b18642ceedbefef28373f
 
 build:
   noarch: python
@@ -20,21 +20,22 @@ requirements:
     - pip
   run:
     - python >=3.6,<4
-    - numpy >=1.20,<2
+    - numpy >=1.24,<2
     - matplotlib-base >=3.5
     - h5py >=3.4,<4
     - pytest >=3.5
-    - scipy >=1.1,<2
+    - scipy >=1.9,<2
     - tifffile >=2020.9.30
     - tabulate >=0.8.8,<0.9
-    - opencv >=3.0
     - cachetools >=3.1
     - deprecated >=1.2.8
     - scikit-learn >=0.18.0
     - scikit-image >=0.17.2
     - tqdm >=4.27.0
-    - notebook >=4.4.1
+    - notebook >=4.4.1,<7
     - ipywidgets >=7.0.0
+    - jupyter_client <8
+    - pyzmq <25
 test:
   imports:
     - lumicks.pylake
