@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -36,6 +36,8 @@ requirements:
     - ipywidgets >=7.0.0
     - jupyter_client <8
     - pyzmq <25
+    # Added temporarily as a workaround for nbconvert with Python 3.9. Can be dropped when we drop 3.9. See: https://github.com/jupyter/nbconvert/blob/ca1e94e9fb840b19c34e8fd5a7d14803447fbffa/pyproject.toml#L26
+    - importlib_metadata
 test:
   imports:
     - lumicks.pylake
