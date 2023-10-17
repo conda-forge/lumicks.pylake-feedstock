@@ -1,5 +1,5 @@
 {% set name = "lumicks.pylake" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 70ba5120775de787f9eb2900af8a7f5ba1cec8bb6b3b18642ceedbefef28373f
+  sha256: 2d12c639c501fd4e5890c1cb4d938ee497da39df19ac834eab7842f68641bc89
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
