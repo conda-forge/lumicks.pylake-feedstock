@@ -1,5 +1,5 @@
 {% set name = "lumicks.pylake" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c9c5dd90f6b72ed846cb6420818ab095c2eaddec05e32baa528c896e9605cae
+  sha256: b6cd9579b0c710ec3d67a3ee4d0b09076a765d9c1e0db2a9583ec6fb350d992b
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - pip
   run:
-    - python >=3.9,<4
+    - python >=3.10,<4
     - numpy >=1.24,<2
-    - matplotlib-base >=3.5
+    - matplotlib-base >=3.8
     - h5py >=3.4,<4
     - pytest >=3.5
     - scipy >=1.9,<2
@@ -32,12 +32,10 @@ requirements:
     - scikit-learn >=0.18.0
     - scikit-image >=0.17.2
     - tqdm >=4.27.0
-    - notebook >=4.4.1,<7
+    - notebook >=7
     - ipywidgets >=7.0.0
-    - jupyter_client <8
-    - pyzmq <25
-    # Added temporarily as a workaround for nbconvert with Python 3.9. Can be dropped when we drop 3.9. See: https://github.com/jupyter/nbconvert/blob/ca1e94e9fb840b19c34e8fd5a7d14803447fbffa/pyproject.toml#L26
-    - importlib_metadata
+    - jupyter_client >=8
+    - ipympl >=0.9.3  # Needed for mpl 3.8 compatibility
 test:
   imports:
     - lumicks.pylake
