@@ -1,5 +1,5 @@
 {% set name = "lumicks.pylake" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71c8d178e58398ca5c8c6e9525c8162a36283d6d8c436126297d7139e30cbe3d
+  sha256: 42639cc240e8bdec38dbcc915cec32716d4f53f3f52ae40e61acd17539f20771
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.10,<4
-    - numpy >=1.24,<2
+    - numpy >=1.24
     - matplotlib-base >=3.8
     - h5py >=3.4,<4
     - pytest >=3.5
