@@ -1,14 +1,15 @@
 {% set python_min = "3.10" %}
 {% set name = "lumicks.pylake" %}
-{% set version = "1.6.0" %}
+{% set file_name = "lumicks_pylake" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 88cf6af38e4f7e79afc1e895adfbe6143204b6e5132ee12b2ee8abdd8ed4281c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ file_name }}-{{ version }}.tar.gz
+  sha256: d8f5609391c3293adde18495bcc08add93fd51a72d8b9ea992bdf1e2b811f3c5
 
 build:
   noarch: python
@@ -20,7 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - wheel
-    - setuptools <69.3
+    - setuptools >=69.3
   run:
     - python >={{ python_min }},<4
     - numpy >=1.24
