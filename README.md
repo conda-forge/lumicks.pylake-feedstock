@@ -147,6 +147,5 @@ Feedstock Maintainers
 
 * [@JoepVanlier](https://github.com/JoepVanlier/)
 * [@dean0x7d](https://github.com/dean0x7d/)
-* [@rpauszek](https://github.com/rpauszek/)
 * [@tobiasjj](https://github.com/tobiasjj/)
 
