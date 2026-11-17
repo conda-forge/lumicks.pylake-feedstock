@@ -1,7 +1,7 @@
 {% set python_min = "3.10" %}
 {% set name = "lumicks.pylake" %}
 {% set file_name = "lumicks_pylake" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ file_name }}-{{ version }}.tar.gz
-  sha256: a9170f582c2d6117c51ee67855bb8084169eadd54c7418b32cc52ec7d88930ea
+  sha256: dc40f090233287d247e016711d00cc206fc82ac149f91cd0b84c778a5633ba57
 
 build:
   noarch: python
